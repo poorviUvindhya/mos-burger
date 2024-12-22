@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOS Burgers</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="home-section" class="container">
+    <center>
+      <h2 class="gradient-text">MOS Burgers</h2>
+    </center>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" onclick="showhome()" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showMains()">Mains</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Meals And Combos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promotions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="total()">Check Out</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <h2 class="text-center p-5" style="color: aliceblue">Best Burgers In Sri Lanka</h2>
+    <center>
+      <table>
+        <tr>
+          <td><img width="300" class="m-3 " src="img/burger1.jpg" alt=""></td>
+          <td><img width="300" class="m-3" src="img/burger2.jpg" alt=""></td>
+          <td><img width="300" class="m-3" src="img/burger3.jpg" alt=""></td>
+        </tr>
+      </table>
+    </center>
+
+  </div>
+  </div>
+
+  <div id="nav-section" class="container hidden">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" onclick="showhome()" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="showMains()">Mains</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="showSubmarines()" href="#">Submarines</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="showfries()" href="#">Fries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="showpasta()" href="#">Pasta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="showchicken()" href="#">Chicken</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="showBeverages()" href="#">Beverages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="checkout-section" class="container hidden">
+  <h2 class="text-center mt-4" style="color: aliceblue; background-color: rgb(226, 107, 181);">Check Out</h2>
+  <div class="item-cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: Rs.0.00</p>
+    <button id="checkout-button">Checkout</button>
+  </div>
+  </div>
+
+
+  <div id="mains-section" class="container hidden">
+    <div class="row justify-content-center">
+
+      <h2 class="text-center mt-4" style="color: aliceblue; background-color: rgb(226, 107, 181);">Burgers</h2>
+
+      <div class="col-md-3 item-card" id="B1001">
+        <img width="250" src="img/burger 4" alt="">
+        <h5>Classic Burger (Large)</h5>
+        <p> Bacon or Beef, Avocado, Jalapeños, Lettuce, Cheese,Onion Rings,Tomatoes</p>
+        <h6>Rs. 750.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger 5.jpg" alt="">
+        <h5>Classic Burger (Regular)</h5>
+        <p>Bacon or Beef,mayonnaise,Lettuce,Cheese</p>
+        <h6>Rs. 1500.00</h6>
+        <p>Discount= 10%</p>
+        <button class="btn btn-danger add-to-bucket ">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger8.jpg" alt="">
+        <h5>Turkey Burger </h5>
+        <p>ground beef , Slices of raw onion,lettuce, bacon, mayonnaise</p>
+        <h6>Rs. 1600.00 </h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger6.jpg" alt="">
+        <h5>Chicken Burger (Large) </h5>
+        <p>seasoned chicken, melted cheese,onion, avocado, lettuce, tomato and garlic mayo</p>
+        <h6>Rs. 1400.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger7.jpg" alt="">
+        <h5>Chicken Burger (Regular)</h5>
+        <p>seasoned chicken, melted cheese,lettuce,tomato</p>
+        <h6>Rs. 800.00 </h6>
+        <p>Discount= 20%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger9.jpg" alt="">
+        <h5>Cheese Burger (Large)</h5>
+        <p>Chicken or Beef ,meltable cheese, Ketchup, mayo, Lettuce, tomato, onion and pickles</p>
+        <h6>Rs. 1000.00 </h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burher10.jpg" alt="">
+        <h5>Cheese Burger (Regular)</h5>
+        <p>Beef or Chicken, cheese,tomato, lettuce, onion and ketchup</p>
+        <h6>Rs. 600.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger11.jpg" alt="">
+        <h5>Bacon Burger</h5>
+        <p>ground beef, bacon,cheese,Lettuce, tomato, and mayonnaise</p>
+        <h6>Rs. 650.00</h6>
+        <p>Discount= 15% </p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger18" alt="">
+        <h5>Shawarma Burger</h5>
+        <p>Beef or Chicken,lettuce, red onion, parsley, tomatoes, pickles, or hot peppers</p>
+        <h6>Rs. 800.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger13.jpg" alt="">
+        <h5>Olive Burger</h5>
+        <p>Hamburger patty,Olives,Mayonnaise,Mustard</p>
+        <h6>Rs. 1800.00 </h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burgers14.jpg" alt="">
+        <h5>Double-Cheese Burger</h5>
+        <p>Two beef patties or Two Chicken patties,Two slices of cheese,Ketchup,Mustard,Onions,Pickles</p>
+        <h6>Rs. 1250.00 </h6>
+        <p>Discount= 20%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger15.jpg" alt="">
+        <h5>Crispy Chicken Burger (Regular)</h5>
+        <p>Crispy seasoned chicken breast,melted cheese,onion, avocado, lettuce, tomato and garlic mayo</p>
+        <h6>Rs. 1200.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger16.jpg" alt="">
+        <h5>Crispy Chicken Burger (Large) </h5>
+        <p>crispy chicken,Buttermilk,Red onion,Cheese,Lettuce,Tomato,Mayonnaise</p>
+        <h6>Rs. 1600.00</h6>
+        <p>Discount= 10%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/burger17" alt="">
+        <h5>Paneer Burger </h5>
+        <p>Paneer,Fresh lettuce and tomatoes,Tangy sauces,garam masala, ginger, red chili powder, and turmeric</p>
+        <h6>Rs. 900.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="Submarine-section" class="container hidden">
+    <div class="row justify-content-center">
+      
+      <h2 class="text-center mt-4" style="color: aliceblue; background-color: rgb(226, 107, 181);">Submarines</h2>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub1" alt="">
+        <h5>Crispy Chicken Submarine (Large)</h5>
+        <h6>Rs. 2000.00 </h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub2" alt="">
+        <h5>Crispy Chicken Submarine (Regular)</h5>
+        <h6>Rs. 1500.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/Sub3" alt="">
+        <h5>Chicken Submarine (Large) </h5>
+        <h6>Rs. 1800.00</h6>
+        <p>Discount= 3%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub4" alt="">
+        <h5>Chicken Submarine (Regular)</h5>
+        <h6>Rs. 1400.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub5" alt="">
+        <h5>Grinder Submarine </h5>
+        <h6>Rs. 2300.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub6" alt="">
+        <h5>Cheese Submarine</h5>
+        <h6>Rs. 2200.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub7" alt="">
+        <h5>Double Cheese n Chicken Submarine</h5>
+        <h6>Rs. 1900.00</h6>
+        <p>Discount= 16%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub8.jpg" alt="">
+        <h5>Special Horgie Submarine</h5>
+        <h6>Rs. 2800.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sub9.jfif" alt="">
+        <h5>MOS Special Submarine </h5>
+        <h6>Rs. 3000.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="fries-section" class="container hidden">
+    <div class="row justify-content-center">
+
+      <h2 class="text-center mt-4" style="color: aliceblue; background-color: rgb(226, 107, 181);">Fries</h2>
+
+      <div class="col-md-3 item-card">
+        <img src="img/stfries1.jfif" alt="">
+        <h5>Steak Fries (Large)</h5>
+        <h6>Rs. 1200.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/stfries2.jfif" alt="">
+        <h5>Steak Fries (Medium)</h5>
+        <h6>Rs. 600.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/fries1.jpg" alt="">
+        <h5>French Fries (Large) </h5>
+        <h6>Rs. 800.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/fries2.jfif" alt="">
+        <h5>French Fries (Medium) </h5>
+        <h6>Rs. 650.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/fries3.webp" alt="">
+        <h5>French Fries (Small)</h5>
+        <h6>Rs. 450.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/sfp1.jfif" alt="">
+        <h5>Sweet Potato Fries (Large)</h5>
+        <h6>Rs. 600.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="pasta-section" class="container hidden">
+    <div class="row justify-content-center">
+
+      <h2 class="text-center mt-4" style="color: aliceblue; background-color: rgb(226, 107, 181);">Pasta</h2>
+
+      <div class="col-md-3 item-card">
+        <img src="img/pasta1.jpg" alt="">
+        <h5>Chicken n Cheese Pasta</h5>
+        <h6>Rs. 1600.00</h6>
+        <p>Discount= 15%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/pasta2.jfif" alt="">
+        <h5>Chicken Penne Pasta</h5>
+        <h6>Rs. 1700.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/pasta3.jpg" alt="">
+        <h5>Ground Turkey Pasta Bake</h5>
+        <h6>Rs. 2900.00</h6>
+        <p>Discount= 10%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/pasta4.jpg" alt="">
+        <h5>Creamy Shrimp Pasta</h5>
+        <h6>2000.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/pasta5.jfif" alt="">
+        <h5>Lemon Butter Pasta</h5>
+        <h6>Rs. 1950.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/pasta6.jfif" alt="">
+        <h5>Tagliatelle Pasta</h5>
+        <h6>Rs. 2400.00</h6>
+        <p>Discount= 1%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/pasta7.jpg" alt="">
+        <h5>Baked Ravioli</h5>
+        <h6>Rs. 2000.00</h6>
+        <p>Discount= 1%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="chicken-section" class="container hidden">
+    <div class="row justify-content-center">
+
+      <h2 class="text-center mt-4" style="color: aliceblue; background-color: rgb(226, 107, 181);">Chicken</h2>
+
+      <div class="col-md-3 item-card">
+        <img src="img/chick1.jpg" alt="">
+        <h5>Fried Chicken (Small)</h5>
+        <h6>Rs. 1200.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/chick2.jfif" alt="">
+        <h5>Fried Chicken (Regular)</h5>
+        <h6>Rs. 2300.00</h6>
+        <p>Discount= 10%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/chick3.jfif" alt="">
+        <h5>Fried Chicken (Large)</h5>
+        <h6>Rs. 3100.00</h6>
+        <p>Discount= 5%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/chick4.jpg" alt="">
+        <h5>Hot Wings (Large)</h5>
+        <h6>Rs. 2400.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/chick5.jpg" alt="">
+        <h5>Devilled Chicken (Large)</h5>
+        <h6>Rs. 900.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-3 item-card">
+        <img src="img/chick6.jpg" alt="">
+        <h5>BBQ Chicken (Regular)</h5>
+        <h6>Rs. 2100.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="Beverages-section" class="container hidden">
+    <div class="row justify-content-center">
+      
+      <h2 class="text-center mt-4" style="color: aliceblue; background-color: rgb(226, 107, 181);">Beverages</h2>
+
+      <div class="col-md-4 item-card">
+        <img src="img/pepsi.jfif" alt="">
+        <h5>Pepsi (330ml)</h5>
+        <h6>Rs. 990.00</h6>
+        <p>Discount= 5%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-4 item-card">
+        <img src="img/coca-cola.jpg" alt="">
+        <h5>Coca-Cola (330ml)</h5>
+        <h6>Rs. 1230.00</h6>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-4 item-card">
+        <img src="img/sprite.jfif" alt="">
+        <h5>Sprite (330ml)</h5>
+        <h6>Rs. 1500.00</h6>
+        <p>Discount= 3%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+      <div class="col-md-4 item-card">
+        <img src="img/mirinda.jpg" alt="">
+        <h5>Mirinda (330ml)</h5>
+        <h6>Rs. 850.00</h6>
+        <p>Discount= 7%</p>
+        <button class="btn btn-danger add-to-bucket">Add to Bucket</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-light  p-3 mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-2 ">
+        <p>Order Now</p>
+        <ul>
+          <li>Burgers</li>
+          <li>Submarine</li>
+          <li>fries</li>
+          <li>pasta</li>
+          <li>chicken</li>
+          <li>Beverages</li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ">
+        <p>About</p>
+        <ul>
+          <li>About Us</li>
+          <li>FeedBack</li>
+          <li>Hotline</li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ">
+        <p>Policy</p>
+        <ul>
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+    </div>
+
+    <center>
+      <h5>Find Us on Social Media</h5>
+    </center>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <center style="font-size: 30px;">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+    </center>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+ .gradient-text {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #e23eb9, #d137aa, #ff52bd);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color:transparent;
+    text-align: center;
+    
+}
+
+ body{
+    background-image: url(../img/food1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+} 
+
+.hidden {
+    display: none;
+  }
+
+  .item-card {
+    border: 1px solid #efeded;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    background-color: #efeded;
+  }
+
+  .item-card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .item-cart {
+    border: 1px solid #ccc;
+    padding: 16px;
+    width: 300px;
+    background-color: #f9f9f9;
+  }
+  
+  .item-cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #cart-items li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #total-price {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #checkout-button {
+    display: block;
+    margin: 10px 0 0;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
